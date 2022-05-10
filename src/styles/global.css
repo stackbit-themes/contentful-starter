@@ -1,0 +1,65 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+pre {
+    margin: 0;
+}
+
+h1 {
+    font-size: 3rem;
+    margin-bottom: .5rem;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: .5rem;
+}
+
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: .5rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+section {
+    margin-bottom: 4rem;
+}
+
+pre {
+    background-color: #fafafa;
+    border: 1px solid #999;
+    border-radius: .25rem;
+    font-size: .875rem;
+    line-height: 1.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    white-space: pre-wrap;
+    overflow: hidden;
+}
+
+blockquote {
+    background: #fafafa;
+    border-left: .5rem solid #eee;
+    margin: 1.5rem 0;
+    padding: .875rem;
+}
+
+blockquote p {
+    display: inline;
+}
+
+img {
+    max-width: 100%;
+}
+
+p > img {
+    display: block;
+    margin: 0 auto;
+}

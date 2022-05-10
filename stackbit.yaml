@@ -1,0 +1,12 @@
+stackbitVersion: ~0.4.0
+ssgName: nextjs
+nodeVersion: '14'
+cmsName: contentful
+
+# modelsSource:
+#   type: contentful
+
+models:
+  page:
+    isPage: true
+    urlPath: '/{slug}'
