@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
 h1,
 h2,
 h3,
@@ -7,6 +13,7 @@ h6,
 p,
 pre {
     margin: 0;
+    font-size: 1rem;
 }
 
 h1 {
@@ -62,4 +69,18 @@ img {
 p > img {
     display: block;
     margin: 0 auto;
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    h2 {
+        font-size: 1.5rem;
+    }
+    
+    h3 {
+        font-size: 1.25rem;
+    }
 }

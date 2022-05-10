@@ -3,8 +3,8 @@ ssgName: nextjs
 nodeVersion: '14'
 cmsName: contentful
 
-# modelsSource:
-#   type: contentful
+modelsSource:
+  type: contentful
 
 models:
   page:

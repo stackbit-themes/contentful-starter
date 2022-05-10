@@ -12,7 +12,7 @@ const HeroBanner = (props) => {
     return (
         <section
             className={styles.hero}
-            data-sb-field-path={`${path}`}
+            data-sb-field-path={` ${path} ${path}.image`}
             style={heroImageStyle}
         >
             <Container isSection={false} classes={styles[fields.textColor]}>

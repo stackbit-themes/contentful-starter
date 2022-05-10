@@ -26,3 +26,18 @@
 .Black {
     color: #000;
 }
+
+@media (max-width: 768px) {
+    .hero {
+        height: 30vh;
+        min-height: 200px;
+    }
+
+    .hero__title {
+        font-size: 2rem;
+    }
+
+    .hero__subtitle {
+        font-size: 1.25rem;
+    }
+}

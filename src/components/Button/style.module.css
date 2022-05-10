@@ -1,0 +1,19 @@
+.button {
+    border: 1px solid rgb(2, 0, 29);
+    border-radius: .5rem;
+    padding: .5rem 1rem;
+    text-decoration: none;
+    transition: all .3s ease-in-out;
+    color: #000;
+    display: inline-block;
+}
+
+.button:hover {
+    background-color: rgb(32, 16, 179);
+    color: #fff;
+}
+
+.primary {
+    color: #fff;
+    background-color: rgb(2, 0, 29);
+}

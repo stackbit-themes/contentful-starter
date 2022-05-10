@@ -14,6 +14,7 @@ export async function getEntries(type, queryParams) {
     return client.getEntries({
         content_type: type,
         ...queryParams,
+        include: 10,
     })
         .then((response) => response.items.map(mapEntry));
 }
