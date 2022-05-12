@@ -8,5 +8,5 @@ modelsSource:
 
 models:
   page:
-    isPage: true
+    type: page
     urlPath: '/{slug}'
