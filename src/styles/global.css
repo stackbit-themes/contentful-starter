@@ -1,7 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
-
 body {
-    font-family: 'Roboto', sans-serif;
+    color: #02001d;
+    font-family: "Helvetica Neue",sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: 400;
 }
 
 h1,
@@ -22,7 +33,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
     margin-bottom: .5rem;
 }
 
@@ -32,7 +43,9 @@ h3 {
 }
 
 p {
+    font-size: 1rem;
     margin-bottom: 1rem;
+    line-height: 1.875;
 }
 
 section {
@@ -40,8 +53,8 @@ section {
 }
 
 pre {
-    background-color: #fafafa;
-    border: 1px solid #999;
+    background-color: #f3f4f6;
+    border: 1px solid 75747d;
     border-radius: .25rem;
     font-size: .875rem;
     line-height: 1.5rem;
@@ -52,14 +65,16 @@ pre {
 }
 
 blockquote {
-    background: #fafafa;
-    border-left: .5rem solid #eee;
+    background: #f3f4f6;
+    border-left: .5rem solid #4c57c5;
+    font-style: italic;
     margin: 1.5rem 0;
-    padding: .875rem;
+    padding: 2rem 1.5rem;
 }
 
 blockquote p {
     display: inline;
+    font-size: 2rem;
 }
 
 img {
@@ -75,11 +90,11 @@ p > img {
     h1 {
         font-size: 2rem;
     }
-    
+
     h2 {
         font-size: 1.5rem;
     }
-    
+
     h3 {
         font-size: 1.25rem;
     }

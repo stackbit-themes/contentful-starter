@@ -2,7 +2,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #fafafa;
+    background-color: #f3f4f6;
     padding: 1rem 2rem;
 }
 
@@ -14,14 +14,13 @@
 
 .cta__title {
     font-size: 2rem;
-    font-weight: bold;
     margin: 0;
 }
 
 .cta__subtitle {
     font-size: 1.25rem;
     margin: 0;
-    color: #666;
+    color: #75747d;
     margin-top: .25rem;
 }
 

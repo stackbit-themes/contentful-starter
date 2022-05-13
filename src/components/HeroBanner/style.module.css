@@ -1,6 +1,6 @@
 .hero {
     width: 100%;
-    height: 50vh;
+    height: 40vh;
     min-height: 300px;
     display: flex;
     align-items: center;
@@ -24,7 +24,7 @@
 }
 
 .Black {
-    color: #000;
+    color: #02001d;
 }
 
 @media (max-width: 768px) {
