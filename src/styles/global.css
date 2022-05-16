@@ -23,8 +23,8 @@ h5,
 h6,
 p,
 pre {
-    margin: 0;
     font-size: 1rem;
+    margin: 0;
 }
 
 h1 {
@@ -44,8 +44,8 @@ h3 {
 
 p {
     font-size: 1rem;
-    margin-bottom: 1rem;
     line-height: 1.875;
+    margin-bottom: 1rem;
 }
 
 section {
@@ -58,16 +58,15 @@ pre {
     border-radius: .25rem;
     font-size: .875rem;
     line-height: 1.5rem;
-    padding: 1rem;
     margin-bottom: 1rem;
-    white-space: pre-wrap;
     overflow: hidden;
+    padding: 1rem;
+    white-space: pre-wrap;
 }
 
 blockquote {
     background: #f3f4f6;
     border-left: .5rem solid #4c57c5;
-    font-style: italic;
     margin: 1.5rem 0;
     padding: 2rem 1.5rem;
 }
@@ -75,6 +74,8 @@ blockquote {
 blockquote p {
     display: inline;
     font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    line-height: 1.5;
 }
 
 img {
@@ -90,11 +91,9 @@ p > img {
     h1 {
         font-size: 2rem;
     }
-
     h2 {
         font-size: 1.5rem;
     }
-
     h3 {
         font-size: 1.25rem;
     }

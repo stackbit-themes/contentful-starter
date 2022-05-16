@@ -1,9 +1,9 @@
 .container {
-    width: 100%;
+    box-sizing: border-box;
     margin-left: auto;
     margin-right: auto;
     padding: 0 2rem;
-    box-sizing: border-box;
+    width: 100%;
 }
 
 @media (min-width: 640px) {
@@ -29,6 +29,5 @@
 @media (min-width: 1280px) {
     .container {
         max-width: 80rem;
-        padding: 0 6rem;
     }
 }
