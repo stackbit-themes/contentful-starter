@@ -1,0 +1,23 @@
+{
+    "model": "CtaSection",
+    "presets": [
+        {
+            "label": "CTA Section",
+            "thumbnail": "images/cta-section-cta-section-fd98.png",
+            "metadata": {
+                "categories": [
+                    "Presets"
+                ],
+                "canDelete": true
+            },
+            "data": {
+                "title": "Stackbit + Contentful = 🙌",
+                "subtitle": null,
+                "button": {
+                    "$$ref": "4Oz0mmvyzOYDmimhROPN6T",
+                    "$$type": "Button"
+                }
+            }
+        }
+    ]
+}

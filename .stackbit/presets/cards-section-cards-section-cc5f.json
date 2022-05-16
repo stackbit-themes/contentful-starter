@@ -1,0 +1,31 @@
+{
+    "model": "CardsSection",
+    "presets": [
+        {
+            "label": "Cards Section",
+            "thumbnail": "images/cards-section-cards-section-cc5f.png",
+            "metadata": {
+                "categories": [
+                    "Presets"
+                ],
+                "canDelete": true
+            },
+            "data": {
+                "cards": [
+                    {
+                        "$$ref": "etvcNbYC62Vo2zEARD0xR",
+                        "$$type": "Card"
+                    },
+                    {
+                        "$$ref": "41g7RyG8iOViFr5UFpwlZt",
+                        "$$type": "Card"
+                    },
+                    {
+                        "$$ref": "5gjkdmbK9fjyNWfD97lrWy",
+                        "$$type": "Card"
+                    }
+                ]
+            }
+        }
+    ]
+}

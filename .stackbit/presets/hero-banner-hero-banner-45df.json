@@ -1,0 +1,24 @@
+{
+    "model": "HeroBanner",
+    "presets": [
+        {
+            "label": "Hero Banner",
+            "thumbnail": "images/hero-banner-hero-banner-45df.png",
+            "metadata": {
+                "categories": [
+                    "Presets"
+                ],
+                "canDelete": true
+            },
+            "data": {
+                "title": "Stackbit Contentful Starter",
+                "subtitle": "Featuring Next.js and vanilla CSS",
+                "image": {
+                    "$$ref": "3y0EwcWHE5HvvC6fWPcJft",
+                    "$$type": "__image_model"
+                },
+                "textColor": "White"
+            }
+        }
+    ]
+}
