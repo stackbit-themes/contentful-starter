@@ -3,6 +3,14 @@ ssgName: nextjs
 nodeVersion: '14'
 cmsName: contentful
 
+import:
+  type: contentful
+  contentFile: contentful/export.json
+  uploadAssets: true
+  assetsDirectory: contentful
+  spaceIdEnvVar: CONTENTFUL_SPACE_ID
+  accessTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+
 modelsSource:
   type: contentful
 
