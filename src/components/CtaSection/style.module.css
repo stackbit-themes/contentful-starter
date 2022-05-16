@@ -1,8 +1,8 @@
 .cta-container {
+    align-items: center;
+    background-color: #f3f4f6;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    background-color: #fafafa;
     padding: 1rem 2rem;
 }
 
@@ -14,15 +14,13 @@
 
 .cta__title {
     font-size: 2rem;
-    font-weight: bold;
     margin: 0;
 }
 
 .cta__subtitle {
+    color: #75747d;
     font-size: 1.25rem;
-    margin: 0;
-    color: #666;
-    margin-top: .25rem;
+    margin: 0.25rem 0 0;
 }
 
 @media (max-width: 768px) {
