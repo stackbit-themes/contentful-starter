@@ -5,7 +5,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 if (isDev) {
     const client = createClient({
-        accessToken: isDev ? process.env.CONTENTFUL_PREVIEW_TOKEN : process.env.CONTENTFUL_ACCESS_TOKEN,
+        accessToken: isDev ? getPreviewToken() : process.env.CONTENTFUL_DELIVERY_TOKEN,
         space: process.env.CONTENTFUL_SPACE_ID,
         host: isDev ? 'preview.contentful.com' : 'cdn.contentful.com'
     });
@@ -34,6 +34,17 @@ if (isDev) {
             });
         }, 1000);
     });
+}
+
+function getPreviewToken() {
+    try {
+        const data = JSON.parse(process.env.CONTENTFUL);
+        const space = data.spaces.find((item) => item.spaceId === process.env.CONTENTFUL_SPACE_ID);
+        
+        return space ? space.previewToken : null;
+    } catch (e) {
+        return null;
+    }
 }
 
 module.exports = {
