@@ -5,9 +5,9 @@ const isDev = process.env.NODE_ENV === 'development';
 
 if (isDev) {
     const client = createClient({
-        accessToken: isDev ? getPreviewToken() : process.env.CONTENTFUL_DELIVERY_TOKEN,
+        accessToken: getPreviewToken(),
         space: process.env.CONTENTFUL_SPACE_ID,
-        host: isDev ? 'preview.contentful.com' : 'cdn.contentful.com'
+        host: 'preview.contentful.com',
     });
 
     const socketServer = startHotContentReloadSocketServer();
@@ -40,7 +40,7 @@ function getPreviewToken() {
     try {
         const data = JSON.parse(process.env.CONTENTFUL);
         const space = data.spaces.find((item) => item.spaceId === process.env.CONTENTFUL_SPACE_ID);
-        
+
         return space ? space.previewToken : null;
     } catch (e) {
         return null;
