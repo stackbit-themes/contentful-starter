@@ -5,7 +5,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 if (isDev) {
     const client = createClient({
-        accessToken: CONTENTFUL_PREVIEW_TOKEN,
+        accessToken: process.env.CONTENTFUL_PREVIEW_TOKEN,
         space: process.env.CONTENTFUL_SPACE_ID,
         host: 'preview.contentful.com',
     });
