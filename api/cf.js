@@ -6,7 +6,7 @@ const isDev = process.env.NODE_ENV === 'development';
 
 export async function getEntries(type, queryParams) {
     const client = createClient({
-        accessToken: isDev ? process.env.COTNENTFUL_PREVIEW_TOKEN : process.env.CONTENTFUL_DELIVERY_TOKEN,
+        accessToken: isDev ? process.env.CONTENTFUL_PREVIEW_TOKEN : process.env.CONTENTFUL_DELIVERY_TOKEN,
         space: process.env.CONTENTFUL_SPACE_ID,
         host: isDev ? 'preview.contentful.com' : 'cdn.contentful.com'
     });
