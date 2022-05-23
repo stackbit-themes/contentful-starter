@@ -12,10 +12,10 @@ Here are a few useful tips & links:
 ## Develop with Stackbit Locally
 To spin up local dev, run:
 1. In terminal 1:\
-    `git clone`\
-    `npm install`\
-    Add the Contentful tokens to the `.env` file (see `.env.example` for reference)\
-    `npm run dev`
+    1. `git clone`
+    2. `npm install`
+    3. Add the Contentful tokens to the `.env` file (see `.env.example` for reference)
+    4. `npm run dev`
 
 2. In terminal 2:\
 `sudo npm i -g @stackbit/cli@latest`
