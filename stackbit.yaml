@@ -9,7 +9,8 @@ import:
   uploadAssets: true
   assetsDirectory: contentful
   spaceIdEnvVar: CONTENTFUL_SPACE_ID
-  accessTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+  deliveryTokenEnvVar: CONTENTFUL_DELIVERY_TOKEN
+  previewTokenEnvVar: CONTENTFUL_PREVIEW_TOKEN
 
 modelsSource:
   type: contentful
