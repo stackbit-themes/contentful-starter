@@ -21,6 +21,7 @@
     "react-markdown": "^8.0.3"
   },
   "devDependencies": {
+    "@netlify/plugin-nextjs": "^4.7.1",
     "contentful-export": "^7.17.1",
     "contentful-import": "^8.3.0"
   }
