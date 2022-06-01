@@ -3,9 +3,6 @@ ssgName: nextjs
 nodeVersion: '14'
 cmsName: contentful
 
-publishDir: .next
-buildCommand: npm run build
-
 import:
   type: contentful
   contentFile: contentful/export.json
