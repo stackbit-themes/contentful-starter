@@ -16,7 +16,7 @@ const Page = (props) => {
                 <title>{fields.title}</title>
             </Head>
             <main data-sb-object-id={_id}>
-                {fields.sections.map((section, index) => {
+                {fields.sections?.map((section, index) => {
                     const Component = getComponent(section._type);
 
                     return (<Component path={`sections.${index}`} key={`${section.type}-${index}`} {...section} />);
