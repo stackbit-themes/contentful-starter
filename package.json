@@ -12,7 +12,6 @@
   "author": "Stackbit",
   "license": "ISC",
   "dependencies": {
-    "@stackbit/nextjs-hot-content-reload": "^0.2.0",
     "contentful": "^9.1.28",
     "next": "^12.1.6",
     "normalize.css": "^8.0.1",

@@ -1,6 +1,4 @@
 import Head from 'next/head';
-import { withHotContentReload } from '@stackbit/nextjs-hot-content-reload/hotContentReload';
-
 import { getComponent } from '../index';
 
 const Page = (props) => {
@@ -26,4 +24,4 @@ const Page = (props) => {
     );
 }
 
-export default withHotContentReload(Page);
+export default Page;
