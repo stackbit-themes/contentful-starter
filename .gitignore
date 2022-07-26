@@ -1,5 +1,13 @@
+# Next.js
 /.next
-/node_modules
-.env.local
-.DS_Store
 .cache/
+
+# Dependency cache
+/node_modules
+
+# Mac files
+.DS_Store
+
+# Env vars
+.env*
+!.env*.example
