@@ -10,6 +10,8 @@ const components = {
     'Button': dynamic(() => import('./Button')),
     'Card': dynamic(() => import('./Card')),
     'CardsSection': dynamic(() => import('./CardsSection')),
+
+    'HotContentReload': dynamic(() => import('./HotContentReload')),
 };
 
 export function getComponent(type) {

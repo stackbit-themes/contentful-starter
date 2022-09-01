@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import { getComponent } from '../index';
+import WithHotContentReload from '../HotContentReload';
 
 const Page = (props) => {
     if (!props.page) {
@@ -24,4 +25,4 @@ const Page = (props) => {
     );
 }
 
-export default Page;
+export default WithHotContentReload(Page);
