@@ -1,6 +1,4 @@
-import { getComponent } from '..';
-
-const Container = getComponent('Container');
+import Container from '../Container';
 
 const ImageSection = (props) => {
     return (

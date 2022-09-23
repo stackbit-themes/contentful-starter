@@ -1,9 +1,8 @@
+import Container from '../Container';
 import styles from './style.module.css';
-import { getComponent } from '../../components';
 
 const HeroBanner = (props) => {
     const { path, fields } = props;
-    const Container = getComponent('Container');
 
     const heroImageStyle = {
         backgroundImage: `url(https:${fields?.image?.fields?.file?.url})`

@@ -1,8 +1,6 @@
-import { getComponent } from '..';
+import Container from '../Container';
+import Button from '../Button';
 import styles from './style.module.css';
-
-const Container = getComponent('Container');
-const Button = getComponent('Button');
 
 const CtaSection = (props) => {
     const { path, fields } = props;

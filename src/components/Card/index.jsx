@@ -1,7 +1,5 @@
-import { getComponent } from "..";
-import styles from "./styles.module.css";
-
-const Button = getComponent("Button");
+import Button from '../Button';
+import styles from './styles.module.css';
 
 const Card = (props) => {
   const { title, subtitle, image, text, actions = [], ...rest } = props;
