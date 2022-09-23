@@ -1,7 +1,5 @@
-import ReactMarkdown from 'react-markdown'
-import { getComponent } from '..';
-
-const Container = getComponent('Container');
+import ReactMarkdown from 'react-markdown';
+import Container from '../Container';
 
 const MarkdownSection = (props) => {
     return (

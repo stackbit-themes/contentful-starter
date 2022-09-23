@@ -1,7 +1,5 @@
+import Page from '../src/components/Page';
 import { getPage } from '../api/cf';
-import { getComponent } from '../src/components';
-
-const Page = getComponent('Page');
 
 export default Page;
 

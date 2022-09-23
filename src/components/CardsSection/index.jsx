@@ -1,8 +1,6 @@
-import { getComponent } from '..';
+import Container from '../Container';
+import Card from '../Card';
 import styles from './style.module.css';
-
-const Container = getComponent('Container');
-const Card = getComponent('Card');
 
 const CardsSection = (props) => {
     if (!props.fields) {
