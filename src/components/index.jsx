@@ -6,8 +6,6 @@ const components = {
     'ImageSection': dynamic(() => import('./ImageSection')),
     'CtaSection': dynamic(() => import('./CtaSection')),
     'CardsSection': dynamic(() => import('./CardsSection')),
-
-    'HotContentReload': dynamic(() => import('./HotContentReload')),
 };
 
 export function getComponent(type) {

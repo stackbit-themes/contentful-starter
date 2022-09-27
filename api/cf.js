@@ -44,7 +44,7 @@ function mapEntry(entry) {
 }
 
 function parseField(value) {
-    if (typeof value === 'object' && value.sys) {
+    if (typeof value === 'object' && value !== null && value.sys) {
         return mapEntry(value);
     }
 

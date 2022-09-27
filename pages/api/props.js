@@ -8,13 +8,12 @@ export default async function handler(req, res) {
     }
 
     const { path } = req.query;
-    
+
     if (!path) {
         return res.status(500).send('Required field `path` is empty.');
     }
 
     const sanitizedPath = path.replace(/^\/|\/$/g, '') || '/';
-
     const pageData = await getPage(sanitizedPath);
 
     res.status(200).json({ page: pageData });

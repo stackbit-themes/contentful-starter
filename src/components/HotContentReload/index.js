@@ -15,26 +15,31 @@ const HotContentReload = (Component) => {
         const [stateProps, setStateProps] = useState(props);
         const { asPath } = useRouter();
 
-        const onContentChange = useCallback(() => {
-            fetch(`/api/props?path=${encodeURIComponent(location.pathname)}`)
+        const onContentChange = (e) => {
+            if (e.detail.changedObjectIds.some((changedObjectId) => e.detail.visibleObjectIds.includes(changedObjectId))) {
+                onPageChange();
+            }
+        }
+
+        const onPageChange = useCallback(() => {
+            fetch(`/api/props?path=${encodeURIComponent(asPath)}`)
                 .then((response) => response.json())
-                .then((data) => setStateProps(data));
-        }, [setStateProps]);
+                .then((data) => setStateProps(data))
+                .catch(() => {
+                    console.log(`An error occured fetching props for path '${asPath}'`);
+                });
+        }, [asPath, setStateProps]);
 
         useEffect(() => {
-            if (isDev) {
-                onContentChange();
-            }
+            onPageChange();
         }, [asPath]);
 
         useEffect(() => {
-            if (isDev) {
-                window.addEventListener(CONTENT_CHANGE_EVENT, onContentChange);
+            window.addEventListener(CONTENT_CHANGE_EVENT, onContentChange);
 
-                return () => {
-                    window.removeEventListener(CONTENT_CHANGE_EVENT, onContentChange);
-                };
-            }
+            return () => {
+                window.removeEventListener(CONTENT_CHANGE_EVENT, onContentChange);
+            };
         }, []);
 
         return (
