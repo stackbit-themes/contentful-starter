@@ -10,6 +10,17 @@ export default {
     ssgName: 'nextjs',
     nodeVersion: '16',
 
+    import: {
+        type: 'contentful',
+        contentFile: 'contentful/export.json',
+        uploadAssets: true,
+        assetsDirectory: 'contentful',
+        spaceIdEnvVar: 'CONTENTFUL_SPACE_ID',
+        deliveryTokenEnvVar: 'CONTENTFUL_DELIVERY_TOKEN',
+        previewTokenEnvVar: 'CONTENTFUL_PREVIEW_TOKEN',
+        accessTokenEnvVar: 'CONTENTFUL_MANAGEMENT_TOKEN'
+    },
+
     // contentSources is a list of modules implementing the ContentSourceInterface
     contentSources: [
         new ContentfulContentSource({
@@ -20,15 +31,17 @@ export default {
         })
     ],
 
-    mapModels: ({ models, contentSourceType, contentSourceProjectId }) => {
+    mapModels: ({ models }) => {
         return models.map((model) => {
-            // to enable page editing and sitemap features in Stackbit
-            // change the model type of the 'page' model to 'type: page'
+            // To enable in-context editing and sitemap features in Stackbit
+            // change the model type of the 'page' model to 'type: page' and
+            // set the 'urlPath'.
+            // For more info please visit Stackbit documentation at:
+            // https://docs.stackbit.com/reference/defining-models/model-properties
             if (model.name === 'page') {
                 model.type = 'page';
                 model.urlPath = '/{slug}';
             }
-
             return model;
         });
     }

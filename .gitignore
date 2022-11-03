@@ -11,3 +11,5 @@
 # Env vars
 .env*
 !.env*.example
+
+.idea
