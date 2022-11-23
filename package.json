@@ -1,6 +1,6 @@
 {
   "name": "sb-cf-starter",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Stackbit - Next.js + Contentful Starter",
   "main": "index.js",
   "scripts": {
@@ -13,14 +13,16 @@
   "license": "ISC",
   "dependencies": {
     "contentful": "^9.1.28",
-    "next": "^12.1.6",
+    "dotenv": "^16.0.3",
+    "next": "^13.0.4",
     "normalize.css": "^8.0.1",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "react-markdown": "^8.0.3"
   },
   "devDependencies": {
-    "@netlify/plugin-nextjs": "^4.7.1",
+    "@netlify/plugin-nextjs": "^4.25.0",
+    "@stackbit/cms-contentful": "^0.0.33",
     "contentful-export": "^7.17.1",
     "contentful-import": "^8.3.0"
   }

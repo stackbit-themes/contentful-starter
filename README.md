@@ -6,7 +6,7 @@
 
 </div>
 
-This is a minimal starting point for new Stackbit projects. It is built with Next.js and equipped with visual editing capabilities using Stackbit. It uses Contentful as the content source. See below for [other Stackbit example projects](#other-stackbit-projects).
+This is a minimal starting point for new Stackbit projects. It is built with Next.js and uses Contentful as the content source. See below for [other Stackbit example projects](#other-stackbit-projects).
 
 ## Getting Started
 
@@ -33,8 +33,8 @@ npm run dev
 Install the Stackbit CLI. Then open a new terminal window in the same project directory and run the Stackbit Dev server:
 
 ```txt
-npm install -g @stackbit/cli
-stackbit dev -c contentful --contentful-space-id <space_id> --contentful-preview-token <preview_token> --contentful-access-token <access_token>
+npm install -g @stackbit/cli@latest
+stackbit dev
 ```
 
 This outputs your own Stackbit URL. Open this, register or sign in, and you will be directed to Stackbit's visual editor for your new project.
@@ -59,9 +59,9 @@ If you don't have a Contentful space set up and ready to go, you can import the 
 
 Here are a few suggestions on what to do next if you're new to Stackbit:
 
-- Learn [how Stackbit works](https://docs.stackbit.com/conceptual-guides/how-stackbit-works/)
-- Follow the [_Getting Started_ tutorial](https://docs.stackbit.com/getting-started/)
-- Explore the [how-to guides](https://docs.stackbit.com/how-to-guides/) for help while developing your site
+- Learn [how Stackbit works](https://docs.stackbit.com/concepts/how-stackbit-works)
+- Follow the [_Getting Started_ tutorial](https://docs.stackbit.com/getting-started)
+- Explore the [how-to guides](https://docs.stackbit.com/guides) for help while developing your site
 
 ## Other Stackbit Projects
 
