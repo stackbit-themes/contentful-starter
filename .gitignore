@@ -1,6 +1,7 @@
 # Next.js
 /.next
 .cache/
+.stackbit/cache
 
 # Dependency cache
 /node_modules

@@ -1,15 +1,18 @@
 import path from 'path';
 import dotenv from 'dotenv';
-
+// @stackbit/cms-contentful is a dev dependency, and not used by the site code itself.
 import { ContentfulContentSource } from '@stackbit/cms-contentful';
 
+// For local development, share the .env file that the Next.js server reads
 dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 export default {
-    stackbitVersion: '~0.5.0',
+    stackbitVersion: '~0.6.0',
     ssgName: 'nextjs',
     nodeVersion: '16',
 
+    // Only needed for repositories duplicatable through https://app.stackbit.com/import
+    // for the automatic provisioning of space contents.
     import: {
         type: 'contentful',
         contentFile: 'contentful/export.json',
@@ -31,19 +34,11 @@ export default {
         })
     ],
 
-    mapModels: ({ models }) => {
-        return models.map((model) => {
-            // To enable in-context editing and sitemap features in Stackbit
-            // change the model type of the 'page' model to 'type: page' and
-            // set the 'urlPath'.
-            // For more info please visit Stackbit documentation at:
-            // https://docs.stackbit.com/reference/defining-models/model-properties
-            if (model.name === 'page') {
-                model.type = 'page';
-                model.urlPath = '/{slug}';
-            }
-            return model;
-        });
+    // models property allows tweaking/extending any existing model (as well as adding new ones).
+    // Typically used to mark page-type models for the visual editor and map content items of these
+    // type to page URLs. This enables the editor to create a sitemap from content and open the 
+    // appropriate page fields for editing as you navigate between fields.
+    models: {
+        page: { type: 'page', urlPath: '/{slug}' }
     }
-
 };
