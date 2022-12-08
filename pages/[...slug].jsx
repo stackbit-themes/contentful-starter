@@ -4,7 +4,7 @@ import { getPage, getAllPageSlugs } from '../api/cf';
 export default Page;
 
 export async function getStaticPaths() {
-    const slugs = await getAllPageSlugs();
+    const slugs = (await getAllPageSlugs())?.filter((slug) => slug !== '/');
     const paths = slugs.map(slug => ({
         params: {
             slug: slug.split('/')
