@@ -5,7 +5,7 @@ const HeroBanner = (props) => {
     const { path, fields } = props;
 
     const heroImageStyle = {
-        backgroundImage: `url(https:${fields?.image?.fields?.file?.url})`
+        backgroundImage: `url(https:${fields.image?.fields?.file?.url})`
     };
 
     return (
