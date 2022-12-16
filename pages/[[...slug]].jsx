@@ -7,20 +7,18 @@ export default Page;
 export async function getStaticPaths() {
     const slugs = await getAllPageSlugs();
 
-    const paths = slugs.map((slug) => ({
-        params: {
-            slug,
-        },
-    }));
+    const paths = slugs?.map((slug) => slug.startsWith('/') ? slug : `/${slug}`) ?? [];
 
     return {
         paths,
-        fallback: true,
+        fallback: false,
     }
 }
 
 export async function getStaticProps({ params }) {
-    const page = await getPage(params.slug);
+    const urlPath = params.slug ? (params.slug).join('/') : '/';
+
+    const page = await getPage(urlPath);
 
     return {
         props: {
