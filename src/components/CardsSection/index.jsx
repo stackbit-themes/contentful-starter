@@ -7,15 +7,17 @@ const CardsSection = (props) => {
         return null;
     }
 
-    const { path, fields: { cards } } = props;
+    const { path, fields: { cards = [] } } = props;
 
     return (
         <Container data-sb-field-path={path}>
-            <div data-sb-field-path=".cards" className={styles.cards}>
-                {cards.map((card) => (
-                    <Card key={card._id} data-sb-object-id={card._id} {...card.fields} />
-                ))}
-            </div>
+            {cards.length > 0 && (
+                <div data-sb-field-path=".cards" className={styles.cards}>
+                    {cards.map((card) => (
+                        <Card key={card._id} data-sb-object-id={card._id} {...card.fields} />
+                    ))}
+                </div>
+            )}
         </Container>
     );
 };
