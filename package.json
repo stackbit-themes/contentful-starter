@@ -22,7 +22,7 @@
   },
   "devDependencies": {
     "@netlify/plugin-nextjs": "^4.25.0",
-    "@stackbit/cms-contentful": "^0.0.34",
+    "@stackbit/cms-contentful": "^0.0.42",
     "contentful-export": "^7.17.1",
     "contentful-import": "^8.3.0"
   }
