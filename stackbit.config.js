@@ -8,49 +8,14 @@ dotenv.config({ path: path.resolve(__dirname, '.env') });
 
 // Add more models here, and make sure that getDocumentLocale can assign the relevant locale to documents.
 const LOCALIZED_MODELS = ['page', 'CtaSection'];
-const getDocumentLocale = (document, locales) => {
-    const localeCodes = locales?.map(locale => locale.code);
+const LOCALES = ['en-US', 'fr']
+const getDocumentLocale = (document) => {
     if (document.fields.slug) {
-        return localeCodes.find(code => document.fields.slug?.value?.toLowerCase().startsWith(`${code.toLowerCase()}/`));
+        return LOCALES.find((locale) => document.fields.slug?.value?.startsWith(locale));
     }
 
-    return localeCodes.includes(document.fields?.locale?.value) ? document.fields?.locale.value : null;
+    return LOCALES.includes(document.fields?.locale?.value) ? document.fields?.locale.value : null;
 };
-
-class MyContentSource extends ContentfulContentSource {
-    async getModels() {
-        return (await super.getModels()).map(model => {
-            if (LOCALIZED_MODELS.includes(model.name)) {
-                return {
-                    ...model,
-                    localized: true
-                };
-            }
-            return model;
-        });
-    }
-
-    convertEntries(entries, modelMap) {
-        const result = super.convertEntries(entries, modelMap);
-        return result.map(document => {
-            if (LOCALIZED_MODELS.includes(document.modelName)) {
-                const locale = getDocumentLocale(document, this.locales);
-                return {
-                    ...document,
-                    locale
-                };
-            }
-            return document;
-        });
-    }
-
-    async createDocument(options, locale = 'en-US') {
-        if (options.model.localized) {
-            options.locale = locale;
-        }
-        return super.createDocument(options);
-    }
-}
 
 export default {
     stackbitVersion: '~0.6.0',
@@ -72,13 +37,38 @@ export default {
 
     // contentSources is a list of modules implementing the ContentSourceInterface
     contentSources: [
-        new MyContentSource({
+        new ContentfulContentSource({
             spaceId: process.env.CONTENTFUL_SPACE_ID,
             environment: process.env.CONTENTFUL_ENVIRONMENT || 'master',
             previewToken: process.env.CONTENTFUL_PREVIEW_TOKEN,
             accessToken: process.env.CONTENTFUL_MANAGEMENT_TOKEN
         })
     ],
+
+    mapModels({models}) {
+        return models.map((model) => {
+            if (LOCALIZED_MODELS.includes(model.name)) {
+                return {
+                    ...model,
+                    localized: true
+                };
+            }
+            return model;
+        });
+    },
+
+    mapDocuments({documents, models}) {
+        return documents.map((document) => {
+            if (LOCALIZED_MODELS.includes(document.modelName)) {
+                const locale = getDocumentLocale(document);
+                return {
+                    ...document,
+                    locale
+                };
+            }
+            return document;
+        });
+    },
 
     // models property allows tweaking/extending any existing model (as well as adding new ones).
     // Typically used to mark page-type models for the visual editor and map content items of these
