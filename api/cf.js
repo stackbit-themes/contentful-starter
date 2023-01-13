@@ -1,6 +1,6 @@
 import { createClient } from 'contentful';
 
-const TYPE_PAGE = 'page';
+const PAGE_TYPES = ['page', 'localizedPage'];
 
 const isDev = process.env.NODE_ENV === 'development';
 
@@ -20,14 +20,19 @@ export async function getEntries(type, queryParams) {
 }
 
 export async function getPage(slug) {
-    return getEntries(TYPE_PAGE, {
+    return Promise.all(PAGE_TYPES.map(type=>getEntries(type, {
         'fields.slug': slug
-    }).then((items) => items.length > 0 ? items[0] : null);
+    }))).then((results)=>{
+        return results.flat();
+    }).then((items) => {
+        return items.length > 0 ? items[0] : null;
+    });
 }
 
 export async function getAllPageSlugs() {
-    return getEntries(TYPE_PAGE)
-        .then((pages) => pages.map((page) => page.fields.slug));
+    return Promise.all(PAGE_TYPES.map(type=>getEntries(type))).then((results)=>{
+        return results.flat();
+    }).then((pages) => pages.map((page) => page.fields.slug));
 }
 
 
