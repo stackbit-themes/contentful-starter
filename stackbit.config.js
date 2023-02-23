@@ -29,12 +29,12 @@ class MyContentSource extends ContentfulContentSource {
                 options.updateOperationFields.locale = { type: 'enum', value: options.locale };
             }
 
-            const slugField = options.model.fields.find((field) => field.name === 'slug');
-            if (slugField) {
-                if (options.updateOperationFields?.slug && !options.updateOperationFields?.slug?.value.startsWith(options.locale)) {
-                    throw new Error(`slug '${options.updateOperationFields?.slug?.value}' must start with locale '${options.locale}'`);
-                }
-            }
+            // const slugField = options.model.fields.find((field) => field.name === 'slug');
+            // if (slugField) {
+            //     if (options.updateOperationFields?.slug && !options.updateOperationFields?.slug?.value.startsWith(options.locale)) {
+            //         throw new Error(`slug '${options.updateOperationFields?.slug?.value}' must start with locale '${options.locale}'`);
+            //     }
+            // }
         }
         return super.createDocument(options);
     }
