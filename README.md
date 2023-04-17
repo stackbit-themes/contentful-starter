@@ -1,5 +1,7 @@
 # Next.js + Contentful Stackbit Starter
 
+### 👉 This repository is archived, for an up-to-date Next.js & Contentful starter [see here](https://github.com/stackbit-themes/nextjs-contentful-starter).
+
 <div style="text-align: center">
 
 ![Full Stackbit Starter](https://assets.stackbit.com/docs/contentful-starter-thumb.png)
